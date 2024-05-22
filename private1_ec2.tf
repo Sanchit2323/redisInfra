@@ -9,7 +9,7 @@ resource "aws_instance" "deploy_ec2_private1_instance" {
     device_index         = 0
   }
 
-  key_name = "Sanchit3"
+  key_name = "Sanchit32"
 
   tags = {
     Name = "redis1"
@@ -44,16 +44,8 @@ resource "aws_security_group" "web_server_sg_private1_tf" {
 
   ingress {
     description = "Redis ingress"
-    from_port   = 5601
-    to_port     = 5601
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "Redis ingress"
-    from_port   = 9200
-    to_port     = 9200
+    from_port   = 6379
+    to_port     = 6379
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
