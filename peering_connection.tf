@@ -2,7 +2,7 @@
 
 resource "aws_vpc_peering_connection" "deploy_vpc_peering" {
   #  owner account id
-  peer_owner_id = "211125535330"
+  peer_owner_id = "590183719329"
   #   vpc id of another vpc , acceptor
   peer_vpc_id = "vpc-053fed05712ac3dde"
   #   requester
