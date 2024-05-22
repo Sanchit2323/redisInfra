@@ -2,6 +2,11 @@ provider "aws" {
   region = "ap-south-1"
 }
 
+terraform {
+  backend "local" {
+    path = "terraform.tfstate"
+  }
+}
 # vpc
 resource "aws_vpc" "deploy_vpc" {
   cidr_block       = "10.0.0.0/16"
