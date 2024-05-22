@@ -50,11 +50,11 @@ resource "aws_nat_gateway" "deploy_nat_gateway" {
 # data block for already created vpc
 
 data "aws_vpc" "selected" {
-  id = "vpc-053fed05712ac3dde"
+  id = "vpc-0e9baaca3c4ad778e"
 }
 
 # data "aws_subnet" "selected" {
-#   id = "subnet-091c7f4ac73d3ba01"
+#   id = "subnet-077dbcd0842c059e1"
 # }
 
 
