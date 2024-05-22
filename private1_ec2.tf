@@ -43,7 +43,7 @@ resource "aws_security_group" "web_server_sg_private1_tf" {
   }
 
   ingress {
-    description = "Kibana ingress"
+    description = "Redis ingress"
     from_port   = 5601
     to_port     = 5601
     protocol    = "tcp"
@@ -51,7 +51,7 @@ resource "aws_security_group" "web_server_sg_private1_tf" {
   }
 
   ingress {
-    description = "Elastic ingress"
+    description = "Redis ingress"
     from_port   = 9200
     to_port     = 9200
     protocol    = "tcp"
@@ -59,7 +59,7 @@ resource "aws_security_group" "web_server_sg_private1_tf" {
   }
 
   ingress {
-    description = "Elastic ingress"
+    description = "Redis ingress"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
