@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Terraform plan') {
             steps {
-                sh 'terraform plan'
+                sh 'terraform plan -lock=false'
             }
         }
         // stage to apply OR destroy infra
@@ -38,7 +38,7 @@ pipeline {
                     def action = params.ACTION
                     switch (action) {
                         case 'Create Infra':
-                            sh 'terraform apply --auto-approve'
+                            sh 'terraform apply -lock=false --auto-approve'
                             break
                         case 'Destroy Infra':
                             sh 'terraform destroy --auto-approve'
